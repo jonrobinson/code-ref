@@ -1,0 +1,55 @@
+# Forked Packages
+
+### Add the package
+1. `version` =  "master"
+2. `url` = set value
+3. `source.reference` = "master"
+4. `required` (add from package composer.json)
+5. `type` = "library"
+6. `autoload` = (get from package composer.json)
+7. `extra.laravel.providers` (check the original provider reference)
+8. `config.sort-packages` = true
+```
+{
+    "type": "package",
+    "package": {
+        "name": "original-provider/original-package-name",
+        "version": "master",
+        "source": {
+            "url": "https://github.com/64robots/package-name",
+            "type": "git",
+            "reference": "master"
+        },
+        "require": {
+            "php": ">=7.1.0"
+        },
+        "type": "library",
+        "autoload": {
+            "psr-4": {
+                "NovaAjaxSelect\\": "src/"
+            }
+        },
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "NovaAjaxSelect\\FieldServiceProvider"
+                ]
+            }
+        },
+        "config": {
+            "sort-packages": true
+        },
+        "minimum-stability": "dev",
+        "prefer-stable": true
+    }
+}
+```
+
+
+### Update Version to "*"
+
+```
+    "require": {
+        "original-provider/original-package-name": "*",
+    }
+```

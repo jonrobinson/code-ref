@@ -1,0 +1,28 @@
+# Branch Specific Package
+
+Simpely replace the version with: `dev-[BRANCH_NAME]`
+
+### Update Require:
+```
+"require": {
+    ....
+    "cwsdigital/twill-metadata": "dev-v1.x",
+    ....
+}
+```
+
+### If using a forked repository
+
+"repositories": [
+{
+    "type": "package",
+    "package": {
+        "name": "cwsdigital/twill-metadata",
+        "version": "dev-v1.x",  // <------------ SEE HERE FOR FORKED PACKAGES
+        "source": {
+            "url": "https://github.com/64robots/twill-metadata",
+            "type": "git",
+            "reference": "v1.x"
+        },
+}
+```

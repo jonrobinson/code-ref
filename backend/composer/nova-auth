@@ -1,1 +1,6 @@
 composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_PASSWORD }}
+
+or manually update the global auth composer file found here:
+```
+subl ~/.composer/auth.json
+```

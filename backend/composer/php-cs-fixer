@@ -1,0 +1,33 @@
+# PHP CS Fixer
+
+### Update Composer Require Dev
+```
+"require-dev": {
+    ...
+    "friendsofphp/php-cs-fixer": "^3.0",
+    ...
+},
+```
+
+### Update Composer Scripts
+```
+"php-cs-fixer": [
+    "php-cs-fixer fix --dry-run --stop-on-violation --diff --config=.php_cs.dist.php"
+],
+```
+
+### Update Composer Hooks
+```
+"extra": {
+    "hooks": {
+        ...
+        "pre-commit": [
+            "./vendor/bin/sail exec -T laravel.test composer php-cs-fixer"
+        ]
+        ...
+    },
+},
+```
+
+### Add The `.php_cs.dist.php` File to the root of the project
+

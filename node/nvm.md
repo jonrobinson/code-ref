@@ -20,4 +20,5 @@ If you need to link NVM follow the ./homebrew/zshrc_missing_reference instructio
 ```
 nvm install X.X.X
 nvm use X.X.X
+nvm use 16.11.0
 ```

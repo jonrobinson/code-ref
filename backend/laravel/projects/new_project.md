@@ -45,3 +45,16 @@ Gate::define('viewVaporUI', function ($user = null) {
 vapor zone [your_domain]
 ```
 
+### Setup Vapor Github Link
+1. Go to project
+2. Settings
+3. Add Github repository
+
+### Setup Github Actions
+See Readme.
+
+
+### Setup Slack Notifications
+1. Github Slack Notificaitons
+  * Github -> Project -> Settings -> Integrations ->
+
